@@ -1,6 +1,8 @@
 # 🚀 Fast GitHub Access
 
 解决国内访问 GitHub 慢的问题，自动生成 `hosts` 文件，支持每 2 小时自动更新。
+保存地址 防止失联
+```https://namegenliang.github.io/fast-github-access/hosts/github-hosts.txt```
 
 ## 🛠 功能
 
