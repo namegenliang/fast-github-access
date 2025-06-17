@@ -4,7 +4,7 @@
 
 保存地址 防止失联
 
-```https://namegenliang.github.io/fast-github-access/hosts/github-hosts.txt```
+`https://namegenliang.github.io/fast-github-access/hosts/github-hosts.txt`
 
 ## 🛠 功能
 
