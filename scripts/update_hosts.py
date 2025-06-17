@@ -47,7 +47,9 @@ def get_ip(domain):
 def generate_hosts():
     hosts = [
         f"# Last update: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n",
-        "# 请保存https://namegenliang.github.io/fast-github-access/hosts/github-hosts.txt"
+        "# 请保存https://namegenliang.github.io/fast-github-access/hosts/github-hosts.txt\n"
+        "# 请保存https://namegenliang.github.io/fast-github-access/hosts/github-hosts.txt\n"
+        "# 请保存https://namegenliang.github.io/fast-github-access/hosts/github-hosts.txt\n"
     ]
     for domain in github_domains:
         ip = get_ip(domain)
@@ -59,9 +61,6 @@ def generate_hosts():
     hosts.append("# 本文件由 GitHub Actions 自动生成\n")
     hosts.append("# 项目地址：https://github.com/namegenliang/fast-github-access\n")
     hosts.append("# 每 2 小时自动更新一次，如有问题请namegenliang@gmail.com\n")
-    hosts.append("\n# 请保存https://namegenliang.github.io/fast-github-access/hosts/github-hosts.txt\n")
-    hosts.append("\n# 请保存https://namegenliang.github.io/fast-github-access/hosts/github-hosts.txt\n")
-    hosts.append("\n# 请保存https://namegenliang.github.io/fast-github-access/hosts/github-hosts.txt\n")
     return ''.join(hosts)
 
 def write_hosts_file():
