@@ -1,0 +1,32 @@
+name: Update GitHub Hosts
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Generate hosts file
+        run: |
+          python scripts/update_hosts.py
+
+
+      - name: Commit and push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add hosts/github-hosts.txt
+          git commit -m "Update GitHub hosts" || echo "No changes to commit"
+          git push
